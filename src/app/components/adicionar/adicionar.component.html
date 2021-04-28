@@ -1,4 +1,4 @@
-<form [FormGroup]="formulario" (ngSubmit)="Crear()">
+<form [formGroup]="formulario" (ngSubmit)="crear()" >
     <ul>
         <li>
             <label for="nombre" style="padding-right: 10%" >Nombres</label>
@@ -8,14 +8,14 @@
         <li>
             <label for="Apellidos" style="padding-right: 9.2%">Apellidos</label>
             <br>
-            <input formControlName = "apellidos" type="text" required>
+            <input formControlName= "apellidos" type="text" required>
         </li>
 
         <li>
-            <label formControlName="genero">Seleccione Genero</label><br>
-            <input type="radio" formControlName="genero" value="male">Hombre.
-            <input type="radio" formControlName="genero" value="female">Mujer.
-            <input type="radio" formControlName="genero" value="other">Otro.
+            <label >Seleccione Genero</label><br>
+            <input type="radio"  value="male">Hombre.
+            <input type="radio" value="female">Mujer.
+            <input type="radio"  value="other">Otro.
         </li>
          <br>
         <li>
@@ -271,12 +271,12 @@
         </li>
         <br>
         <li>
-            <label for="description">Ciudad</label><br>
-            <input type="text" id="ciudad">
+            <label for="ciudad">Ciudad</label><br>
+            <input formControlName="ciudad" type="text" id="ciudad">
         </li>
         <br>
         <li>
-            <button type="submit" id="enviar" OnClick="GuardarEnLista()"> Enviar Informacion</button>
+            <button type="submit" id="enviar" > Enviar Informacion</button>
             <button type="reset" id="borrar">Borrar formulario</button>
         </li>
     </ul>

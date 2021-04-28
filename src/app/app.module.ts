@@ -11,7 +11,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { VistatarjetaComponent } from './components/vistatarjeta/vistatarjeta.component';
 import { AdicionarComponent } from './components/adicionar/adicionar.component';
 import { ListausuariosComponent } from './components/listausuarios/listausuarios.component';
-
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,9 @@ import { ListausuariosComponent } from './components/listausuarios/listausuarios
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    ReactiveFormsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

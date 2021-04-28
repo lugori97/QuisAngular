@@ -1,1 +1,13 @@
-<p>vistatarjeta works!</p>
+<table>
+    
+    
+    <tr *ngFor="let item of Lista">
+       <td><mat-card>
+        <mat-card-title>{{item.nombre}} {{item.apellidos}}</mat-card-title>
+        <mat-card-subtitle>{{item.pais}} {{item.ciudad}}</mat-card-subtitle>
+        <mat-card-content>{{item.genero}}</mat-card-content>
+        </mat-card></td>
+        
+       
+    </tr>
+</table>
