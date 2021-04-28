@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {FormGroup,FormBuilder } from '@angular/forms';
 @Component({
   selector: 'app-adicionar',
   templateUrl: './adicionar.component.html',
@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdicionarComponent implements OnInit {
 
-  constructor() { }
+  formulario:FormGroup;
+
+
+  constructor(public fb:FormBuilder) { 
+    
+    this.formulario =fb.group({})
+  }
 
   ngOnInit(): void {
   }

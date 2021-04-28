@@ -1,27 +1,27 @@
-<form id="formulario" >
+<form [FormGroup]="formulario" (ngSubmit)="Crear()">
     <ul>
         <li>
-            <label for="nombre" style="padding-right: 10%">Nombres</label>
+            <label for="nombre" style="padding-right: 10%" >Nombres</label>
             <br>
-            <input type="text" required >
+            <input [formGroupName]="nombre" type="text" required >
         </li>
         <li>
             <label for="Apellidos" style="padding-right: 9.2%">Apellidos</label>
             <br>
-            <input type="text" required>
+            <input id="apellidos" type="text" required>
         </li>
         
         <li>
             <label for="genero">Seleccione Genero</label><br>
-            <input type="radio" >Hombre. 
-            <input type="radio" >Mujer. 
-            <input type="radio" >Otro. 
+            <input type="radio" id="male" name="gender" value="male">Hombre. 
+            <input type="radio" id="female" name="gender" value="female">Mujer. 
+            <input type="radio" id="other" name="gender" value="other">Otro. 
             
         </li>
          <br>
         <li>
             <label >Pais</label><br>
-            <select name="Pais" content="Seleccione un pais">
+            <select name="Pais" id="pais">
                 <option value="Afganistan">Afghanistan</option>
                 <option value="Albania">Albania</option>
                 <option value="Algeria">Algeria</option>
@@ -273,7 +273,7 @@
         <br>
         <li>
             <label for="description">Ciudad</label><br>
-            <input type="text" id="descripcion">
+            <input type="text" id="ciudad">
         </li>
         <br>
         <li>
