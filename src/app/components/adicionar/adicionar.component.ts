@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup,FormBuilder } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Usuario } from 'src/app/interfaces/usuarios.model';
+import { ListaUsuarios } from '../../interfaces/usuarios.model';
+
 @Component({
   selector: 'app-adicionar',
   templateUrl: './adicionar.component.html',
@@ -7,15 +10,24 @@ import {FormGroup,FormBuilder } from '@angular/forms';
 })
 export class AdicionarComponent implements OnInit {
 
-  formulario:FormGroup;
+  public formulario:FormGroup;
+  public user: Usuario;
+  constructor() {
 
-
-  constructor(public fb:FormBuilder) { 
-    
-    this.formulario =fb.group({})
+    this.formulario = new FormGroup({
+      nombre: new FormControl('', Validators.required),
+      apellidos: new FormControl('', Validators.required),
+      genero: new FormControl('', Validators.required),
+      pais: new FormControl(''),
+    });
   }
 
   ngOnInit(): void {
+
   }
 
+  GuardarEnLista(): void {
+    this.user.nombre = this.formulario.get("nombre").value;
+    ListaUsuarios.push()
+  }
 }

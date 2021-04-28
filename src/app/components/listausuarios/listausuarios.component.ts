@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Usuarios,ListaUsuarios} from "../../interfaces/usuarios";
+import { Component, OnInit } from "@angular/core";
+
 @Component({
   selector: 'app-listausuarios',
   templateUrl: './listausuarios.component.html',
@@ -7,11 +7,11 @@ import {Usuarios,ListaUsuarios} from "../../interfaces/usuarios";
 })
 export class ListausuariosComponent implements OnInit {
 
-  Lista:Array<Usuarios>=ListaUsuarios;
+
   constructor() { }
 
   ngOnInit(): void {
-    
+
   }
 
 }

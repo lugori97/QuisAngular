@@ -3,25 +3,24 @@
         <li>
             <label for="nombre" style="padding-right: 10%" >Nombres</label>
             <br>
-            <input [formGroupName]="nombre" type="text" required >
+            <input formControlName="nombre" type="text" required >
         </li>
         <li>
             <label for="Apellidos" style="padding-right: 9.2%">Apellidos</label>
             <br>
-            <input id="apellidos" type="text" required>
+            <input formControlName = "apellidos" type="text" required>
         </li>
-        
+
         <li>
-            <label for="genero">Seleccione Genero</label><br>
-            <input type="radio" id="male" name="gender" value="male">Hombre. 
-            <input type="radio" id="female" name="gender" value="female">Mujer. 
-            <input type="radio" id="other" name="gender" value="other">Otro. 
-            
+            <label formControlName="genero">Seleccione Genero</label><br>
+            <input type="radio" formControlName="genero" value="male">Hombre.
+            <input type="radio" formControlName="genero" value="female">Mujer.
+            <input type="radio" formControlName="genero" value="other">Otro.
         </li>
          <br>
         <li>
             <label >Pais</label><br>
-            <select name="Pais" id="pais">
+            <select formControlName="pais">
                 <option value="Afganistan">Afghanistan</option>
                 <option value="Albania">Albania</option>
                 <option value="Algeria">Algeria</option>
@@ -277,7 +276,7 @@
         </li>
         <br>
         <li>
-            <button type="submit" id="enviar"> Enviar Informacion</button>
+            <button type="submit" id="enviar" OnClick="GuardarEnLista()"> Enviar Informacion</button>
             <button type="reset" id="borrar">Borrar formulario</button>
         </li>
     </ul>
