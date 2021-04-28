@@ -1,0 +1,28 @@
+<div id="logo" >
+    <img src="assets/img/womenuser.png" width="170px" height="180px">
+    <img src="assets/img/menuser.png" width="170px" height="180px">
+    <h1 id= "texto">Clientes</h1>
+</div>
+
+
+
+<nav>
+    <div id = "menu">
+        <a [routerLink]="['/vistatarjeta']" routerLinkActive="router-link-active" >
+        <button mat-button >
+            <mat-icon inline=true>reorder</mat-icon>
+            Vista Card
+        </button></a>
+        <a [routerLink]="['/listausuarios']" routerLinkActive="router-link-active" >
+        <button mat-button >
+            <mat-icon inline=true>reorder</mat-icon>
+            Lista
+        </button></a>
+        <a [routerLink]="['/adicionar']" routerLinkActive="router-link-active" >
+        <button mat-button >
+            <mat-icon inline=true>add_circle_outline</mat-icon>
+            Adicionar
+        </button> 
+        </a>
+    </div>
+</nav>

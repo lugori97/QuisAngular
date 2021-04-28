@@ -1,0 +1,18 @@
+<table>
+    <tr>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Pais</th>
+        <th>Ciudad</th>
+        <th>Genero</th>
+    </tr>
+
+    <tr *ngFor="let item of Lista">
+       <td>{{item.nombre}}</td>
+       <td>{{item.apellidos}}</td>
+       <td>{{item.pais}}</td>
+       <td>{{item.ciudad}}</td>
+       <td>{{item.genero}}</td>
+       
+    </tr>
+</table>
